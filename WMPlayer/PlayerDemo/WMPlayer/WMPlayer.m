@@ -151,7 +151,7 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
     [self.loadingView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self.contentView);
     }];
-    [self.loadingView startAnimating];
+    [self.loadingView stopAnimating];
 
     
     //topView
@@ -666,8 +666,8 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
         [self.loadingView stopAnimating];
     }
     
-    if (!self.placeholderImage) {//开发者可以在此处设置背景图片
-        UIImage *image = WMPlayerImage(@"");
+    if (!self.placeholderImage) {//开发者可以在此处设置默认的背景图片
+        UIImage *image = WMPlayerImage(@"WMPlayerBackground");
         self.contentView.layer.contents = (id) image.CGImage;
     }
     //左上角的返回按钮的样式

@@ -52,16 +52,13 @@
         double time = [TheUserDefaults doubleForKey:kHistoryTime];
         self.wmPlayer.seekTime = time;
     }
-    [self.wmPlayer setURLString:@"http://admin.weixin.ihk.cn/ihkwx_upload/test.mp4"];
-
-
+//    [self.wmPlayer setURLString:@"http://admin.weixin.ihk.cn/ihkwx_upload/test.mp4"];
     self.wmPlayer.delegate = self;
 //    [self.wmPlayer setURLString:@"http://static.tripbe.com/videofiles/20121214/9533522808.f4v.mp4"];
     self.wmPlayer.closeBtn.hidden = YES;
     [self.view addSubview:self.wmPlayer];
 
-    
-    [self.wmPlayer play];
+//    [self.wmPlayer play];
 
 
 }
